@@ -1,0 +1,21 @@
+# traits: (RAML10)
+
+  internal:
+    usage: Apply this to annotate any method that is not for public consumption.
+    description: The raml-api viewer looks for this trait and tags the display.
+  standardErrors:
+    usage: Apply this to any method that returns standardized errors
+    description: Most API errors fail in standard ways such as incorrect authorization.
+    responses:
+      400:
+        description: |
+          When the API fails it will return `400`.  Details about the specific cause of the failure
+          can be determined from the response body.
+        body:
+          application/json:
+            example: |
+              {
+                "error": {
+                  "message": "Need authentication"
+                }
+              }

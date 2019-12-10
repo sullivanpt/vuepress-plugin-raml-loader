@@ -1,0 +1,44 @@
+{
+  "name": "vuepress-plugin-raml-loader",
+  "version": "1.0.0",
+  "description": "vuepress plugin to render markdown from raml",
+  "main": "src/index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev",
+    "docs:build": "vuepress build",
+    "lint": "eslint --ext .js .",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sullivanpt/vuepress-plugin-raml-loader.git"
+  },
+  "keywords": [
+    "vuepress",
+    "plugin",
+    "raml",
+    "webpack"
+  ],
+  "author": "Patrick Sullivan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sullivanpt/vuepress-plugin-raml-loader/issues"
+  },
+  "homepage": "https://github.com/sullivanpt/vuepress-plugin-raml-loader#readme",
+  "prettier": "prettier-config-vuepress",
+  "dependencies": {
+    "js-yaml": "^3.13.1",
+    "lodash": "^4.17.15",
+    "omit-deep": "^0.3.0",
+    "pretty-data": "^0.40.0",
+    "raml-1-parser": "^1.1.58"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-config-vuepress": "^2.1.0",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1",
+    "prettier-config-vuepress": "^1.0.0",
+    "vuepress": "^1.2.0"
+  }
+}

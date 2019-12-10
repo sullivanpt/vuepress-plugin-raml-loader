@@ -1,0 +1,15 @@
+#%RAML 1.0
+# example file useful for testing formatting
+
+title: Example RAML API
+baseUri: https://{server.com}/tfel2rs/v2
+version: v2
+documentation:
+  - !include lib/ex-doc-one.yaml
+  - title: more documentation
+    content: |
+      markdown with _formatting_ and
+      bay of pigs.
+traits: !include lib/traits-v1.yaml
+/exResourceful: !include resources/ex-resourceful.yaml
+/applications: !include resources/ex-another.yaml

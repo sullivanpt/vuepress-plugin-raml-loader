@@ -1,0 +1,52 @@
+# /applications:
+  displayName: get applications
+  description: a different resource can have a __description__ too?
+  get:
+    description: this is a different resource
+  post:
+    description: update the __application__
+    body:
+      application/json:
+        examples:
+          simple:
+            value: { "simple": "example" }
+          complex:
+            displayName: a complex example
+            description: I'd like to tell you __but__ I'd have to kill you
+            value: |
+              {
+                "notSimple": "example"
+              }
+    responses:
+      200:
+        description: a __response code__ can have a description
+        body:
+          application/json:
+            description: A __lengthy__ description of the type in general
+            properties:
+              simple:
+                displayName: the primary key
+                description: A __required__ simple string
+                type: string
+              optionalKey:
+                displayName: the optional key
+                description: This __might__ not be present
+                type: string
+                required: false
+              nested:
+                type: object
+                required: false
+                properties:
+                  nestedValue:
+                    type: string
+            examples:
+              simple-response:
+                value: { "simple": "response example" }
+              complex-response:
+                displayName: a complex response example
+                description: I'd like to tell you __but__ I'd have to kill you
+                value: |
+                  {
+                    "simple": "response example",
+                    "optionalKey": "option is given"
+                  }

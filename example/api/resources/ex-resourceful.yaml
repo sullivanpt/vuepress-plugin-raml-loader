@@ -1,0 +1,140 @@
+# /exResourceful:
+
+  displayName: a resource can have a display name
+  description: |
+    we like bold descriptions
+    --------------------
+    a resource can have a __description__ too?
+  get:
+    description: |
+      get server config data _and_ important stuff
+    queryParameters:
+      Useful-param:
+        displayName: long name of param
+        type: string
+        enum: [cats, dogs]
+        description: |
+          Lengthy description of param
+          ======
+          Shows __something__ useful, but what
+        example: dogs
+        required: false
+      paramSelect:
+        displayName: param2 has a long name too
+        type: integer
+        example: 1234
+        required: true
+      scaleResult:
+        displayName: should results be scaled
+        description: |
+          a useful param that does the following
+
+          * creates animals
+          * creates plants
+        type: boolean
+        default: false
+    responses:
+      200:
+        description: |
+          here is header
+          ==============
+          here are some details about the response
+
+          * including __markdown__ for
+          * extra stuff
+
+          and isn't that great
+        body:
+          application/xml:
+            example: |
+              <?xml version="1.0" encoding="UTF-8" ?>
+              <configuration>
+                <awesomeFeatureEnabled>TRUE</awesomeFeatureEnabled>
+                <defaultCurrency>USD</defaultCurrency>
+              </configuration>
+      400:
+        description: operation __not__ allowed
+        body:
+          application/json:
+            schema: |
+              {
+                    "$schema": "http://json-schema.org/draft-03/schema",
+                    "properties": {
+                        "input": {
+                            "required": false,
+                            "type": "string"
+                        }
+                    },
+                    "required": false,
+                    "type": "object"
+              }
+  /{resourceId}:
+    displayName: A resource gets a display name
+    uriParameters:
+      resourceId:
+        displayName: The id of the resource to post
+        description: |
+          here is some
+
+          html
+          ====
+
+          stuff
+        type: string
+    post:
+      description: |
+        attention
+        =========
+
+        we can parade post to this API too
+      is: [standardErrors]
+      queryParameters:
+        Useful-param:
+          displayName: long name of param
+          type: string
+          enum: [cats, dogs, pigs, sheep, goats, orangatans, voles, fish, warthogs, snakes]
+          description: Shows __something__ useful, but what
+          default: cats
+          example: cats
+          required: false
+      body:
+        application/json:
+          schema: |
+            {
+              "$schema": "http://json-schema.org/draft-03/schema",
+              "description": "a long description <b>here we go bold</b> and there",
+              "properties": {
+                  "input": {
+                      "required": false,
+                      "type": "string"
+                  }
+              },
+              "required": false,
+              "type": "object"
+            }
+          example: |
+            {
+              "input": "stuff"
+            }
+      responses:
+        200:
+          description: |
+            A long description goes here.
+          body:
+            application/json:
+              schema: |
+                {
+                  "$schema": "http://json-schema.org/draft-03/schema",
+                  "properties": {
+                      "input": {
+                          "required": false,
+                          "type": "string"
+                      }
+                  },
+                  "required": false,
+                  "type": "object"
+                }
+              example: |
+                {
+                  "input": "stuff"
+                }
