@@ -27,7 +27,7 @@
   "homepage": "https://github.com/sullivanpt/vuepress-plugin-raml-loader#readme",
   "prettier": "prettier-config-vuepress",
   "dependencies": {
-    "js-yaml": "^3.13.1",
+    "js-yaml": "^4.1.1",
     "lodash": "^4.17.15",
     "omit-deep": "^0.3.0",
     "pretty-data": "^0.40.0",
