@@ -28,7 +28,7 @@
   "prettier": "prettier-config-vuepress",
   "dependencies": {
     "js-yaml": "^3.13.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.23",
     "omit-deep": "^0.3.0",
     "pretty-data": "^0.40.0",
     "raml-1-parser": "^1.1.58"
